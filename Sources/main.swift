@@ -26,7 +26,7 @@ extension MMATeamBot: MessageEventsDelegate {
         
         if let channel = message.channel, let text = message.text, let id = client.authenticatedUser?.id {
             if id != message.user && message.user != nil {
-             client.webAPI.sendMessage(channel: channel, text: "https://www.youtube.com/watch?v=to2mBD1P8I8", unfurlLinks: false, success: nil, failure: nil)
+                client.webAPI.sendMessage(channel: channel, text: "https://www.youtube.com/watch?v=to2mBD1P8I8", parse: SlackKit.SlackWebAPI.ParseMode.full, success: nil, failure: nil)
                 
 //                client.webAPI.sendMessage(channel:channel, text: text, linkNames: true, success: {(response) in
 //                }, failure: { (error) in
